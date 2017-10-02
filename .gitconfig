@@ -1,0 +1,15 @@
+[user]
+	name = Yan Burman
+	email = <yanburman@users.noreply.github.com>
+[core]
+        editor = vim
+[alias]
+	co = checkout
+	br = branch
+	ci = commit -s
+	st = status
+	slog = log --pretty=short
+;[diff]
+;	algorithm = patience
+[color]
+	ui = auto
