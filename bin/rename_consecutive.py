@@ -10,7 +10,7 @@ def rename(folder, ext):
     curr_idx = 1
     prefix = 'f_'
     for f in glob.glob(os.path.join(folder, '*.%s' % ext)):
-        os.rename(f, '{prefix:s}{idx:05d}.{ext:%s}'.format(prefix=prefix, idx=curr_idx, ext=ext))
+        os.rename(f, '{prefix:s}{idx:05d}.{ext:s}'.format(prefix=os.path.join(folder, prefix), idx=curr_idx, ext=ext))
         curr_idx += 1
 
 
