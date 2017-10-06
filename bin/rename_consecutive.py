@@ -15,7 +15,17 @@ def rename(folder, ext):
 
 
 def main():
-    rename(sys.argv[1], sys.argv[2])
+    parser = argparse.ArgumentParser(description='Rename files to have consecutive names')
+    parser.add_argument('-d', '--folder',
+                        help='Path to folder', metavar='DIR', required=True)
+
+    parser.add_argument('-e', '--extension',
+                        help='File extension', metavar='EXT', default='JPG')
+
+    args = parser.parse_args()
+
+    rename(args.folder, args.extension)
 
 
-main()
+if __name__ == "__main__":
+    sys.exit(main())
